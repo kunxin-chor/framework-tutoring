@@ -6,6 +6,11 @@ const app =  express();
 // initialise the view engine
 app.set('view engine', 'hbs')
 
+// initialise express to use static files
+// specifically, we need to inform Express which folder to find the static files
+// the first parameter to express.static is which folder the static files are in
+app.use(express.static('./public'));
+
 // initialise wax-on (after we create the `app`)
 wax.on(hbs.handlebars); // set up wax-on
 wax.setLayoutPath('./views/layouts'); // where to find layouts
