@@ -1,0 +1,21 @@
+{{#extends 'base'}}
+
+{{#block "content"}}
+<h1>Contact Us</h1>
+
+
+{{#ifEquals email "admin@asd.com"}}
+<p>Welcome back admin</p>
+{{else}}
+<p>You are not admin</p>
+{{/ifEquals}}
+
+{{#if email}}
+<p>Your email is: {{email}}</p>
+{{else}}
+<p>You didn't specify an email address</p>
+{{/if}}
+
+{{/block}}
+
+{{/extends}}

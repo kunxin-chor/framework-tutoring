@@ -1,0 +1,29 @@
+{{#extends 'base'}}
+
+{{#block "content"}}
+<h1>About us</h1>
+
+<h2>Where to find us</h2>
+{{#each locations}}
+<div class="card" style="width: 18rem;">
+     <div class="card-body">
+        <h5 class="card-title">{{this.name}}</h5>
+         <ul></ul>
+        {{#each this.openingHours}}       
+            <li>{{this}}</li>        
+        {{/each}}
+        </ul>
+
+    </div>
+</div>
+{{/each}}
+
+
+
+<p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Assumenda itaque
+    facilis qui tempore error facere quaerat accusamus omnis asperiores, atque
+    molestias, modi aspernatur laborum obcaecati aperiam explicabo unde, fugiat
+    illo.</p>
+{{/block}}
+
+{{/extends}}
