@@ -1,0 +1,16 @@
+{{#extends "base"}}
+
+{{#block "content"}}
+<h1>Listings</h1>
+
+<ul>
+    {{#each listings}}
+        <li>
+            {{this.name}} ( {{this.listing_url}})
+        </li>
+    {{/each}}
+</ul>
+
+{{/block}}
+
+{{/extends}}
